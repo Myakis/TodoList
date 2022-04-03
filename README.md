@@ -8,7 +8,7 @@
 - classnames
 - flip move
 
-![Превьюшка](https://github.com/Myakis/pizza-order-app/raw/master/preview.jpg)
+![Превьюшка](https://github.com/Myakis/TodoList/raw/master/preview.jpg)
 
 ## Available Scripts
 

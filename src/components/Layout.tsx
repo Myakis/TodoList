@@ -6,9 +6,9 @@ import Main from './Main';
 const Layout: FC = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} sx={{ border: '1px solid black' }}>
+      <Grid item xs={12}>
         <Header />
-      </Grid>{' '}
+      </Grid>
       <Grid item xs={12}>
         <Container>
           <Main />

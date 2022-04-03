@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Todo List на React и TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Используемый Stack
+
+- React
+- TypeScript
+- material UI
+- classnames
+- flip move
+
+![Превьюшка](https://github.com/Myakis/pizza-order-app/raw/master/preview.jpg)
 
 ## Available Scripts
 

@@ -8,10 +8,12 @@ interface TodoFormProps {
 const FormInput: FC<TodoFormProps> = props => {
   const [title, setTitle] = useState<string>('');
 
+  //Изменение поля ввода через state
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
   };
 
+  //Отправка по нажатию Enter
   const keyPressHandler = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       props.onAdd(title);
@@ -28,6 +30,7 @@ const FormInput: FC<TodoFormProps> = props => {
         id='standard-basic'
         label='Задача'
         variant='standard'
+        autoComplete='off'
         fullWidth
       />
     </div>

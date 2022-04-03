@@ -1,5 +1,8 @@
+import { Checkbox, IconButton, ListItem } from '@mui/material';
 import React, { FC } from 'react';
 import FlipMove from 'react-flip-move';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 import { ITodo } from './Main';
 import NoTodos from './NoTodos';
 
@@ -23,17 +26,25 @@ const TodoList: FC<TodoListProps> = ({ todos, toggleTodo, removeTodo }) => {
       <FlipMove>
         {todos.map(todo => {
           return (
-            <li key={todo.id}>
-              <label htmlFor=''>
-                <input
-                  onChange={toggleTodo!.bind(null, todo.id)}
-                  type='checkbox'
+            <ListItem key={todo.id}>
+              <label
+                style={{ width: '100% ', display: 'flex', alignItems: 'flex-start' }}
+                className={todo.check ? 'checked' : ''}>
+                <Checkbox
                   checked={todo.check}
+                  color='secondary'
+                  onChange={toggleTodo!.bind(null, todo.id)}
                 />
-                <span>{todo.title}</span>
-                <div onClick={e => removeHandler(e, todo.id)}>delete</div>
+                <p style={{ marginTop: '0.5rem' }}> {todo.title}</p>
+                <div
+                  style={{ marginLeft: 'auto', marginTop: '0.1rem' }}
+                  onClick={e => removeHandler(e, todo.id)}>
+                  <IconButton aria-label='delete' color='error'>
+                    <DeleteIcon />
+                  </IconButton>
+                </div>
               </label>
-            </li>
+            </ListItem>
           );
         })}
       </FlipMove>

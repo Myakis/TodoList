@@ -28,7 +28,7 @@ const FormInput: FC<TodoFormProps> = props => {
         onKeyDown={keyPressHandler}
         value={title}
         id='standard-basic'
-        label='Задача'
+        label='Добавить задачу'
         variant='standard'
         autoComplete='off'
         fullWidth

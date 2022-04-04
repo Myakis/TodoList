@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import TodoEmpty from '../assets/img/todo.png';
+import TodoEmpty from '../assets/img/emptyTodo.png';
 
 const NoTodos = () => {
   return (
